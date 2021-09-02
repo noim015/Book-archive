@@ -13,7 +13,8 @@
     <header>
         <div class="container">
             <div class="row pt-5">
-                <div class="input-group mb-3">
+                <!-- Section for search field and button -->
+                <div class="input-group mb-3"> 
                     <input type="text" id="search-field" class="form-control" placeholder="Please enter Book name" aria-label="Book name" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                       <button onclick="searchBooks()"  class="btn btn-outline-primary mx-2" type="button">Search</button>
@@ -22,8 +23,17 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-left"> Result Found: <span id="result_found" ></span></h1>
+                    <!-- Result Found Section -->
+                    <h1 class="text-left p-3"><span id="result_found" ></span></h1>
+                    <!-- Section for if the input field empty -->
+                    <div class="text-left p-3" style="color:red;font-size: 30px;" id="error"></div>
                 </div>
+            </div>
+            <div class="row">
+                <!-- Section for the loading spinner -->
+                <div class="spinner-border text-info" role="status" id="spinner">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
             </div>
         </div>
     </header>
@@ -31,8 +41,8 @@
     <!-- Main Area Starts Here  -->
     <main>
         <div class="container">
-            <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4">
-                <!-- Search results HTML  -->
+            <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 my-5">
+                <!-- Search results go here  -->
             </div>
         </div>
      </main>
